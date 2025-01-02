@@ -73,13 +73,14 @@ The project was created as part of the Master's thesis by Kilian Heyer.
 2. Running the Models
 
     Open GAMA: Open the .gaml files in the /code/ directory in GAMA.
-    Load Data: Adjust file paths in the model to point to the appropriate data in the /data/ folder. 
-               To run the models sucessfully they must be given: the adresses, streets, start_point,road for deliverer as shp and the delivery_time as csv. 
-               Also A csv must be stated for the results to be saved.
-               An error will appear if the file to save the data does not exist.  
+    Load Data: Adjust file paths in the model to point to the appropriate data in the /data/ folder. --> Line 21 to 53.
+               To run the models sucessfully they must be given: the adresses, streets, start_point,road for deliverer as shp and the delivery_time as csv.
+               Also A csv must be stated for the results to be saved.  --> Line 49 or 50.
+               In line 130 or 134 the street shapefiles maximum driving speed columns must be entered. In the given data it sould be:  [maxspeedT::read('VMAX_CAR_T'),maxspeedB::read('VMAX_CAR_B')]
+               In line 158 or 162 "column_of_households" must be changed to the name of the column of houzseholds according to the address files. It shoudl be "HAUSHALTE" for all areas but 502021 there it is called "FEI_Hausha".
     Run the Simulation: Execute the model and analyze results in GAMA or from the /results/ folder.
 
-3. Using the TSP Solver
+4. Using the TSP Solver
 
     Export data for the TSP solver using Concorde_export.gaml.
     Solve the TSP problem with the Concorde TSP solver https://www.math.uwaterloo.ca/tsp/concorde/index.html.
