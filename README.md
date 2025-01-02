@@ -17,7 +17,7 @@ The project was created as part of the Master's thesis by Kilian Heyer.
 |   |-- Data_for_area_502021/  # Data for area 502021
 |   |-- Data_for_area_502023/  # Data for area 502023
 |   |-- Data_for_area_502601/  # Data for area 502601
-|   |-- fake_timetable.csv     # delivery timetable with fake times
+|   |-- timetable.csv     # delivery timetable 
 |
 |-- /results/                  # Simulation results
 |   |-- 502010_model_2_results.xlsx
@@ -47,7 +47,7 @@ The project was created as part of the Master's thesis by Kilian Heyer.
     Location: /data/
     Contents:
         Subdirectories and zip files for different areas (e.g., Data_for_area_502010).
-        A sample fake_timetable.csv for delivery times. The fake_timetable is a dummy data containing fake data. Because of a data protection agreement with Feibra GmbH the origianl Data must not be                   published. A exact reproduktion of the thesis results is not possible with this time table but proportionate result should be generated.
+        The timetable.csv used for delivery times. 
 
 
 3. Results
@@ -82,7 +82,7 @@ The project was created as part of the Master's thesis by Kilian Heyer.
 3. Using the TSP Solver
 
     Export data for the TSP solver using Concorde_export.gaml.
-    Solve the TSP problem with the Concorde solver.
+    Solve the TSP problem with the Concorde TSP solver https://www.math.uwaterloo.ca/tsp/concorde/index.html.
     Use the results in the simulation by changeing "," to "." and deleting the first(0) and the highest number. Then copy them into Following_TSP_Solver_address.gaml as optimal_path in line 82.
 
 If you have any questions or need support, please reach out to Kilian Heyer at kilian.heyer@gmail.com.
