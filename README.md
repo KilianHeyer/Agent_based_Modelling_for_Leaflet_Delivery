@@ -78,6 +78,8 @@ The project was created as part of the Master's thesis by Kilian Heyer.
                Also A csv must be stated for the results to be saved.  --> Line 49 or 50.
                In line 130 or 134 the street shapefiles maximum driving speed columns must be entered. In the given data it sould be:  [maxspeedT::read('VMAX_CAR_T'),maxspeedB::read('VMAX_CAR_B')]
                In line 158 or 162 "column_of_households" must be changed to the name of the column of houzseholds according to the address files. It shoudl be "HAUSHALTE" for all areas but 502021 there it is called "FEI_Hausha".
+               For Model 2 it is important to adapt max: 208 in line 1588. Max is number of adresses -1.
+               For Model 3 it is important to adapt the loop times in line 1592 to determine the number of random samples. And line 1593 to rnd(0,x); x= number of adresses -1.
     Run the Simulation: Execute the model and analyze results in GAMA or from the /results/ folder.
 
 4. Using the TSP Solver
