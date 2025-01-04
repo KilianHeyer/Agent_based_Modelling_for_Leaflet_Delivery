@@ -19,6 +19,7 @@ The project was created as part of the Master's thesis by Kilian Heyer.
 |   |-- Data_for_area_502601/  # Data for area 502601
 |   |-- timetable.csv     # delivery timetable 
 |   |-- icons    # contains svg icons for the car and the deliverer
+|   |-- results.csv     # csv to save results 
 |
 |-- /results/                  # Simulation results
 |   |-- 502010_model_2_results.xlsx
@@ -77,9 +78,9 @@ The project was created as part of the Master's thesis by Kilian Heyer.
     Open GAMA: Open the .gaml files in the /code/ directory in GAMA.
     Load Data: Adjust file paths in the model to point to the appropriate data in the /data/ folder. --> Line 21 to 53.
                To run the models sucessfully they must be given: the adresses, streets, start_point,road for deliverer as shp and the delivery_time as csv.
-               Also A csv must be stated for the results to be saved.  --> Line 49 or 50.
+               Also A csv must be stated for the results to be saved (the given csv table contains the correct heading).  --> Line 49 or 50.
                The paths to the icons for the deliverer and the car must be correct. They are located in line 684 and 1056 or 691 and 1062/1063. 
-               In line 130 or 134 the street shapefiles maximum driving speed columns must be entered. In the given data it sould be:  [maxspeedT::read('VMAX_CAR_T'),maxspeedB::read('VMAX_CAR_B')]
+               In line 130 or 134 the street shapefiles maximum driving speed columns must be entered. For the given data the correct bracket content sould be:  [maxspeedT::read('VMAX_CAR_T'),maxspeedB::read('VMAX_CAR_B')]
                In line 158 or 162 "column_of_households" must be changed to the name of the column of houzseholds according to the address files. It shoudl be "HAUSHALTE" for all areas but 502021 there it is                 called "FEI_Hausha".
                For Model 2 it is important to adapt max: 208 in line 1588. Max is number of adresses -1.
                For Model 3 it is important to adapt the loop times in line 1592 to determine the number of random samples. And line 1593 to rnd(0,x); x= number of adresses -1.
